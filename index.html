@@ -130,7 +130,7 @@
       <div class="slide active">
         <div class="slide-header">
           <h3 class="slide-title">1. Course Orientation & The O.T.I.S. Framework</h3>
-          <span class="std-badge">ELA Standard 11.01</span>
+          <span class="std-badge">MN 11.1.2.1</span>
         </div>
         <div class="slide-grid">
           <div class="slide-content">
@@ -160,7 +160,7 @@
       <div class="slide">
         <div class="slide-header">
           <h3 class="slide-title">2. American Literary Epochs & Timeline Movement</h3>
-          <span class="std-badge">ELA Standard 11.02</span>
+          <span class="std-badge">MN 11.1.5.1</span>
         </div>
         <div class="slide-grid">
           <div class="slide-content">
@@ -186,7 +186,7 @@
       <div class="slide">
         <div class="slide-header">
           <h3 class="slide-title">3. The Art of "Slow Looking" with Bob Ross</h3>
-          <span class="std-badge">ELA Standard 11.03</span>
+          <span class="std-badge">MN 11.1.8.1</span>
         </div>
         <div class="slide-grid">
           <div class="slide-content">
@@ -215,7 +215,7 @@
       <div class="slide">
         <div class="slide-header">
           <h3 class="slide-title">4. Native American Oral Tradition & Cosmology</h3>
-          <span class="std-badge">ELA Standard 11.03</span>
+          <span class="std-badge">MN 11.1.6.1</span>
         </div>
         <div class="slide-grid">
           <div class="slide-content">
@@ -241,7 +241,7 @@
       <div class="slide">
         <div class="slide-header">
           <h3 class="slide-title">5. Creation Myths & The Earth-Diver Motif</h3>
-          <span class="std-badge">ELA Standard 11.04</span>
+          <span class="std-badge">MN 11.1.5.2</span>
         </div>
         <div class="slide-grid">
           <div class="slide-content">
@@ -267,7 +267,7 @@
       <div class="slide">
         <div class="slide-header">
           <h3 class="slide-title">6. Deep Analysis: "Manabozho and the Muskrat"</h3>
-          <span class="std-badge">ELA Standard 11.04</span>
+          <span class="std-badge">MN 11.1.4.1</span>
         </div>
         <div class="slide-grid">
           <div class="slide-content">
@@ -293,7 +293,7 @@
       <div class="slide">
         <div class="slide-header">
           <h3 class="slide-title">7. The Trickster Archetype & Moral Instruction</h3>
-          <span class="std-badge">ELA Standard 11.05</span>
+          <span class="std-badge">MN 11.1.5.3</span>
         </div>
         <div class="slide-grid">
           <div class="slide-content">
@@ -319,7 +319,7 @@
       <div class="slide">
         <div class="slide-header">
           <h3 class="slide-title">8. Comparative Worldviews: Indigenous vs. Colonial</h3>
-          <span class="std-badge">ELA Standard 11.06</span>
+          <span class="std-badge">MN 11.1.6.2</span>
         </div>
         <div class="slide-grid">
           <div class="slide-content">
@@ -345,7 +345,7 @@
       <div class="slide">
         <div class="slide-header">
           <h3 class="slide-title">9. Close Reading Strategies & Annotation</h3>
-          <span class="std-badge">ELA Standard 11.07</span>
+          <span class="std-badge">MN 11.1.8.2</span>
         </div>
         <div class="slide-grid">
           <div class="slide-content">
@@ -371,7 +371,7 @@
       <div class="slide">
         <div class="slide-header">
           <h3 class="slide-title">10. Crafting Evidence-Based Thesis Statements</h3>
-          <span class="std-badge">ELA Standard 11.08</span>
+          <span class="std-badge">MN 11.2.5.1</span>
         </div>
         <div class="slide-grid">
           <div class="slide-content">
@@ -397,7 +397,7 @@
       <div class="slide">
         <div class="slide-header">
           <h3 class="slide-title">11. Seminar Circle & Discussion Ethics</h3>
-          <span class="std-badge">ELA Standard 11.09</span>
+          <span class="std-badge">MN 11.3.1.2</span>
         </div>
         <div class="slide-grid">
           <div class="slide-content">
@@ -423,7 +423,7 @@
       <div class="slide">
         <div class="slide-header">
           <h3 class="slide-title">12. Unit Assessment & Final Submission</h3>
-          <span class="std-badge">Course Completion Requirement</span>
+          <span class="std-badge">MN 11.2.5.2</span>
         </div>
         <div class="slide-grid">
           <div class="slide-content">
@@ -453,7 +453,7 @@
     </div>
   </div>
 
-  <!-- VIEW 2: Resource Hub (Updated with Exact PDF Filenames) -->
+  <!-- VIEW 2: Resource Hub -->
   <div id="resources-view" class="content-card view-content">
     <h2 style="margin: 0 0 15px 0; font-size: 1.3em; color: #0f172a;">📂 Resource Hub</h2>
 
@@ -532,25 +532,15 @@
 <script>
   let currentSlide = 0;
   const slides = document.querySelectorAll('.slide');
-
-  const literaryPrompts = [
-    '"Bellringer: What is the difference between reading for plot and reading for theme? Write one sentence explaining how an author\'s cultural context shapes their story\'s message."',
-    '"Slow Looking Challenge: Re-read the muskrat\'s dive scene. What specific verbs and sensory details heighten the physical toll of his sacrifice?"',
-    '"Archetype Check: Why are Trickster figures like Manabozho essential to oral teaching traditions across different cultures?"',
-    '"Timeline Reflection: How does the Native American view of human-nature unity contrast with later Puritan views of the wilderness?"',
-    '"Thesis Workout: Draft a one-sentence thesis statement arguing why the smallest creature holds the pivotal role in Ojibwe creation cosmology."'
-  ];
-
-  function generatePrompt() {
-    const randomIdx = Math.floor(Math.random() * literaryPrompts.length);
-    document.getElementById('prompt-display').innerText = literaryPrompts[randomIdx];
-  }
+  const slideNum = document.getElementById('slide-num');
 
   function updateSlideDisplay() {
-    slides.forEach((slide, index) => {
-      slide.classList.toggle('active', index === currentSlide);
+    slides.forEach((slide, idx) => {
+      slide.classList.toggle('active', idx === currentSlide);
     });
-    document.getElementById('slide-num').innerText = `Slide ${currentSlide + 1} of ${slides.length}`;
+    if (slideNum) {
+      slideNum.textContent = `Slide ${currentSlide + 1} of ${slides.length}`;
+    }
   }
 
   function changeSlide(direction) {
@@ -560,14 +550,26 @@
     updateSlideDisplay();
   }
 
-  function switchTab(tab) {
-    document.getElementById('deck-tab').classList.toggle('active', tab === 'deck');
-    document.getElementById('resources-tab').classList.toggle('active', tab === 'resources');
-    document.getElementById('form-tab').classList.toggle('active', tab === 'form');
+  function switchTab(tabName) {
+    document.querySelectorAll('.view-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
 
-    document.getElementById('deck-view').classList.toggle('active', tab === 'deck');
-    document.getElementById('resources-view').classList.toggle('active', tab === 'resources');
-    document.getElementById('form-view').classList.toggle('active', tab === 'form');
+    document.getElementById(tabName + '-view').classList.add('active');
+    document.getElementById(tabName + '-tab').classList.add('active');
+  }
+
+  const literaryPrompts = [
+    '"Bellringer: What is the difference between reading for plot and reading for theme? Write one sentence explaining how an author\'s cultural context shapes their story\'s message."',
+    '"Slow Looking Challenge: Re-read the muskrat\'s dive scene. What specific verbs and sensory details heighten the physical toll of his sacrifice?"',
+    '"Archetype Check: Why are Trickster figures like Manabozho essential to oral teaching traditions across different cultures?"',
+    '"Comparative Perspective: Contrast the Puritan view of wilderness with the Anishinaabe ecological cosmology seen in today\'s reading."',
+    '"Thesis Polish: Write a 1-sentence thesis explaining how humble character archetypes serve moral pedagogy in native creation stories."'
+  ];
+
+  let currentPromptIndex = 0;
+  function generatePrompt() {
+    currentPromptIndex = (currentPromptIndex + 1) % literaryPrompts.length;
+    document.getElementById('prompt-display').textContent = literaryPrompts[currentPromptIndex];
   }
 </script>
 
